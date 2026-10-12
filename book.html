@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Book Direct | The Arch</title>
-  <!-- TODO: update the description with your town name -->
-  <meta name="description" content="The Arch: two stylish self-catering apartments side by side in one building. Book direct for the best rate.">
+  <title>Book Direct | The Arch, Umhlanga</title>
+  <meta name="description" content="Book the Sea View Apartment or the Luxury Balcony Apartment at The Arch, Umhlanga, directly for the best rate.">
+  <meta property="og:title" content="Book Direct | The Arch, Umhlanga">
+  <meta property="og:description" content="Book the Sea View Apartment or the Luxury Balcony Apartment at The Arch, Umhlanga, directly for the best rate.">
+  <meta property="og:image" content="images/building/hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -18,10 +20,9 @@
     <a class="brand" href="index.html">The Arch</a>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
     <nav class="site-nav">
-      <a href="index.html#apartments">Apartments</a>
-      <a href="index.html#gallery">Gallery</a>
+      <a href="apartment-1.html" data-apt-name="apartment-1">Sea View Apartment</a>
+      <a href="apartment-2.html" data-apt-name="apartment-2">Luxury Balcony Apartment</a>
       <a href="index.html#location">Location</a>
-      <a href="index.html#reviews">Reviews</a>
       <a href="index.html#faq">FAQ</a>
       <a class="btn" href="book.html">Book now</a>
     </nav>
@@ -37,9 +38,10 @@
     </div>
     <div class="grid-2" style="margin-top:40px">
       <article class="card book-choice">
-        <img class="card-media" data-photo src="images/apartment-1/cover.jpg" alt="Apartment One">
+        <img class="card-media" src="images/apartment-1/cover.jpg" alt="Sea View Apartment" loading="lazy">
         <div class="card-body">
-          <h3 data-apt-name="apartment-1">Apartment One</h3>
+          <h3 data-apt-name="apartment-1">Sea View Apartment</h3>
+          <p style="color:var(--muted)">Two bedrooms, two bathrooms and a sunny balcony looking straight down the coast.</p>
           <div data-embed="apartment-1" style="width:100%"></div>
           <div class="btn-row" style="justify-content:center">
             <a class="btn" data-book="apartment-1" href="#">Check availability</a>
@@ -48,9 +50,10 @@
         </div>
       </article>
       <article class="card book-choice">
-        <img class="card-media" data-photo src="images/apartment-2/cover.jpg" alt="Apartment Two">
+        <img class="card-media" src="images/apartment-2/cover.jpg" alt="Luxury Balcony Apartment" loading="lazy">
         <div class="card-body">
-          <h3 data-apt-name="apartment-2">Apartment Two</h3>
+          <h3 data-apt-name="apartment-2">Luxury Balcony Apartment</h3>
+          <p style="color:var(--muted)">Designer interiors, an island kitchen, a freestanding bath and a wrap-around ocean-view balcony.</p>
           <div data-embed="apartment-2" style="width:100%"></div>
           <div class="btn-row" style="justify-content:center">
             <a class="btn" data-book="apartment-2" href="#">Check availability</a>
@@ -59,20 +62,27 @@
         </div>
       </article>
     </div>
-    <p class="center" style="margin-top:40px;color:var(--muted)">Questions before you book? Email <a data-email href="#">us</a>.</p>
+    <p class="center" style="margin-top:40px;color:var(--muted)">Questions before you book? Email <a data-email href="#"></a>.</p>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div><strong>The Arch</strong><br><!-- TODO: address --> Address line, Your Town, Postcode</div>
+    <div><strong>The Arch</strong><br>Umhlanga Arch, 1 Ncondo Place<br>Ridgeside, Umhlanga, KwaZulu-Natal</div>
     <div>
-      Email: <a data-email href="#">hello@example.com</a><br>
-      <span data-phone-wrap>Phone: <a data-phone href="#"></a></span>
+      Email: <a data-email href="#"></a><br>
+      <span data-phone-wrap>Phone / WhatsApp: <a data-phone href="#"></a></span>
     </div>
     <div>© <span id="year"></span> The Arch</div>
   </div>
 </footer>
+
+<div class="lightbox" hidden>
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <button class="lightbox-prev" aria-label="Previous photo">‹</button>
+  <img alt="">
+  <button class="lightbox-next" aria-label="Next photo">›</button>
+</div>
 
 <script src="js/config.js"></script>
 <script src="js/main.js"></script>

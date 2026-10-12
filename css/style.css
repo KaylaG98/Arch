@@ -83,8 +83,8 @@ p { margin: 0 0 1em; }
 
 /* Hero */
 .hero { position: relative; min-height: 78vh; display: flex; align-items: flex-end; color: #fff; overflow: hidden; }
-.hero-media, .hero-media.photo-placeholder { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.05) 30%, rgba(0,0,0,.6)); }
+.hero-media { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.1) 20%, rgba(0,0,0,.65)); }
 .hero-content { position: relative; z-index: 1; padding-bottom: 72px; }
 .hero .eyebrow { color: #f3dcc8; }
 .hero p { font-size: 1.2rem; max-width: 560px; opacity: .95; }
@@ -113,12 +113,15 @@ p { margin: 0 0 1em; }
   .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
 }
 
-.photo-placeholder {
-  display: flex; align-items: center; justify-content: center; text-align: center;
-  background: repeating-linear-gradient(135deg, #e9dfd3, #e9dfd3 12px, #efe7dc 12px, #efe7dc 24px);
-  color: var(--muted); font-size: .85rem; padding: 12px;
-}
-.photo-placeholder span { background: rgba(255,255,255,.75); padding: 4px 10px; border-radius: 6px; }
+.gallery img { cursor: zoom-in; transition: opacity .15s ease; }
+.gallery img:hover { opacity: .9; }
+.lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(20, 18, 16, .94); display: flex; align-items: center; justify-content: center; padding: 24px; }
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: 100%; max-height: 90vh; border-radius: 8px; }
+.lightbox button { position: absolute; background: none; border: 0; color: #fff; font-size: 2.6rem; cursor: pointer; padding: 8px 16px; line-height: 1; }
+.lightbox-close { top: 12px; right: 12px; }
+.lightbox-prev { left: 8px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 8px; top: 50%; transform: translateY(-50%); }
 
 /* Apartment page */
 .apt-hero { padding: 56px 0 24px; }

@@ -1,6 +1,6 @@
 # The Arch
 
-Website for The Arch: two self-catering apartments side by side in one building, with direct booking through InnStyle.
+Website for The Arch: two sea-view apartments side by side in Umhlanga Arch, Umhlanga Ridge, Durban, with direct booking through InnStyle.
 
 - Airbnb: [Apartment One](https://www.airbnb.co.uk/rooms/49722888) · [Apartment Two](https://www.airbnb.co.uk/rooms/812778798092691373)
 
@@ -10,8 +10,9 @@ It's a plain static site (HTML/CSS/JS, no build step). Open `index.html` in a br
 
 | File | What it is |
 |---|---|
-| `index.html` | Home: welcome, both apartments, gallery, location, reviews, FAQ |
-| `apartment-1.html` / `apartment-2.html` | Full details, amenities, house rules and booking for each apartment |
+| `index.html` | Home: welcome, both apartments, gallery, location, FAQ |
+| `apartment-1.html` | Sea View Apartment: photos, description, amenities, booking |
+| `apartment-2.html` | Luxury Balcony Apartment: photos, description, amenities, booking |
 | `book.html` | Booking page with both apartments |
 
 ## Connecting InnStyle bookings
@@ -23,20 +24,15 @@ Edit **`js/config.js`**. For each apartment:
 
 You can also set the apartment names, enquiry email and phone number there. Until a `bookingUrl` is set, "Book" buttons open an enquiry email, so guests never hit a dead link.
 
-## Adding your content
+## Content and photos
 
-Search the HTML files for `TODO`. Each one marks text to replace with the details from your Airbnb listings (description, guests/bedrooms, amenities, house rules, reviews, town, address and map postcode).
+All photos are the professional Stephen Rowley shoot from the "Arch photos" folder in Google Drive, resized for the web:
 
-**Photos:** add JPGs using these names:
+- `images/apartment-1/`: Sea View Apartment (2 bedrooms, light oak interiors)
+- `images/apartment-2/`: Luxury Balcony Apartment (island kitchen, freestanding bath)
+- `images/building/`: hero image and coastal views
 
-```
-images/building/hero.jpg         big photo at the top of the home page
-images/building/gallery-1.jpg
-images/apartment-1/cover.jpg, 1.jpg, 2.jpg, 3.jpg, 4.jpg
-images/apartment-2/cover.jpg, 1.jpg, 2.jpg, 3.jpg, 4.jpg
-```
-
-A striped placeholder shows wherever a photo is missing. Aim for landscape images about 1600px wide.
+To change a description, edit the text in `apartment-1.html` / `apartment-2.html`. To swap a photo, replace the file in `images/` with one of the same name.
 
 ## Publishing
 

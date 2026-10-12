@@ -54,20 +54,6 @@
     el.textContent = config.contactPhone;
   });
 
-  // Photos: show a tidy placeholder if an image file hasn't been added yet
-  document.querySelectorAll("img[data-photo]").forEach(function (img) {
-    function fail() {
-      var ph = document.createElement("div");
-      ph.className = img.className + " photo-placeholder";
-      ph.setAttribute("role", "img");
-      ph.setAttribute("aria-label", img.alt);
-      ph.innerHTML = "<span>" + img.alt + "</span>";
-      img.replaceWith(ph);
-    }
-    if (img.complete && img.naturalWidth === 0) fail();
-    else img.addEventListener("error", fail);
-  });
-
   // Mobile nav
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".site-nav");
@@ -81,6 +67,37 @@
         nav.classList.remove("open");
         toggle.setAttribute("aria-expanded", "false");
       });
+    });
+  }
+
+  // Gallery lightbox
+  var box = document.querySelector(".lightbox");
+  if (box) {
+    var boxImg = box.querySelector("img"), list = [], pos = 0;
+    function show(i) {
+      pos = (i + list.length) % list.length;
+      boxImg.src = list[pos].src;
+      boxImg.alt = list[pos].alt;
+    }
+    function close() { box.hidden = true; document.body.style.overflow = ""; }
+    document.querySelectorAll("[data-gallery]").forEach(function (g) {
+      var imgs = Array.prototype.slice.call(g.querySelectorAll("img"));
+      imgs.forEach(function (im, i) {
+        im.addEventListener("click", function () {
+          list = imgs; show(i);
+          box.hidden = false; document.body.style.overflow = "hidden";
+        });
+      });
+    });
+    box.querySelector(".lightbox-close").addEventListener("click", close);
+    box.querySelector(".lightbox-prev").addEventListener("click", function () { show(pos - 1); });
+    box.querySelector(".lightbox-next").addEventListener("click", function () { show(pos + 1); });
+    box.addEventListener("click", function (e) { if (e.target === box) close(); });
+    document.addEventListener("keydown", function (e) {
+      if (box.hidden) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") show(pos - 1);
+      if (e.key === "ArrowRight") show(pos + 1);
     });
   }
 

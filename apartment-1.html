@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Apartment One | The Arch</title>
-  <!-- TODO: update the description with your town name -->
-  <meta name="description" content="The Arch: two stylish self-catering apartments side by side in one building. Book direct for the best rate.">
+  <title>Sea View Apartment | The Arch, Umhlanga</title>
+  <meta name="description" content="Sea View Apartment at The Arch, Umhlanga: Two bedrooms, two bathrooms and a sunny balcony looking straight down the coast.">
+  <meta property="og:title" content="Sea View Apartment | The Arch, Umhlanga">
+  <meta property="og:description" content="Sea View Apartment at The Arch, Umhlanga: Two bedrooms, two bathrooms and a sunny balcony looking straight down the coast.">
+  <meta property="og:image" content="images/building/hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -18,10 +20,9 @@
     <a class="brand" href="index.html">The Arch</a>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
     <nav class="site-nav">
-      <a href="index.html#apartments">Apartments</a>
-      <a href="index.html#gallery">Gallery</a>
+      <a href="apartment-1.html" data-apt-name="apartment-1">Sea View Apartment</a>
+      <a href="apartment-2.html" data-apt-name="apartment-2">Luxury Balcony Apartment</a>
       <a href="index.html#location">Location</a>
-      <a href="index.html#reviews">Reviews</a>
       <a href="index.html#faq">FAQ</a>
       <a class="btn" href="book.html">Book now</a>
     </nav>
@@ -30,17 +31,24 @@
 
 <section class="apt-hero">
   <div class="container">
-    <div class="eyebrow"><a href="index.html">The Arch</a> · Apartment</div>
-    <h1 data-apt-name="apartment-1">Apartment One</h1>
-    <!-- TODO: check guest / bedroom / bed / bathroom numbers against Airbnb -->
-    <ul class="facts"><li>4 guests</li><li>2 bedrooms</li><li>2 beds</li><li>1 bathroom</li></ul>
-    <!-- TODO: add photos to images/apartment-1/ named cover.jpg, 1.jpg … 4.jpg -->
-    <div class="gallery" style="margin-top:20px">
-      <img data-photo src="images/apartment-1/cover.jpg" alt="Apartment One main photo">
-      <img data-photo src="images/apartment-1/1.jpg" alt="Apartment One photo 1">
-      <img data-photo src="images/apartment-1/2.jpg" alt="Apartment One photo 2">
-      <img data-photo src="images/apartment-1/3.jpg" alt="Apartment One photo 3">
-      <img data-photo src="images/apartment-1/4.jpg" alt="Apartment One photo 4">
+    <div class="eyebrow"><a href="index.html">The Arch</a> · Umhlanga Ridge</div>
+    <h1 data-apt-name="apartment-1">Sea View Apartment</h1>
+    <p class="lead">Two bedrooms, two bathrooms and a sunny balcony looking straight down the coast.</p>
+    <ul class="facts"><li>Sleeps 4</li><li>2 bedrooms</li><li>2 bathrooms</li><li>Sea-view balcony</li></ul>
+    <div class="gallery" data-gallery>
+      <img src="images/apartment-1/cover.jpg" alt="Open-plan lounge with ocean views" loading="lazy">
+      <img src="images/apartment-1/main-bedroom.jpg" alt="Queen bedroom" loading="lazy">
+      <img src="images/apartment-1/balcony.jpg" alt="Balcony with breakfast bar and ocean view" loading="lazy">
+      <img src="images/apartment-1/kitchen.jpg" alt="Fully equipped kitchen" loading="lazy">
+      <img src="images/apartment-1/dining.jpg" alt="Dining and living area" loading="lazy">
+      <img src="images/apartment-1/living.jpg" alt="Lounge with corner sofa" loading="lazy">
+      <img src="images/apartment-1/main-bedroom-view.jpg" alt="Main bedroom with view" loading="lazy">
+      <img src="images/apartment-1/ensuite.jpg" alt="En-suite with walk-in shower" loading="lazy">
+      <img src="images/apartment-1/second-bedroom.jpg" alt="Twin bedroom" loading="lazy">
+      <img src="images/apartment-1/balcony-view.jpg" alt="Breakfast bar overlooking the coast" loading="lazy">
+      <img src="images/apartment-1/vanity.jpg" alt="Bathroom vanity" loading="lazy">
+      <img src="images/apartment-1/bathroom.jpg" alt="Second shower room" loading="lazy">
+      <img src="images/apartment-1/kitchen-detail.jpg" alt="Kitchen details" loading="lazy">
     </div>
   </div>
 </section>
@@ -49,51 +57,44 @@
   <div class="container apt-layout">
     <div>
       <h2>About this apartment</h2>
-      <!-- TODO: paste the description from the Airbnb listing -->
-      <p>A bright, airy apartment in The Arch with a spacious open-plan living area, modern kitchen and comfortable bedrooms. A perfect base for exploring the area.</p>
-      <p>The apartment is fully self-contained with its own kitchen, lounge and bathroom. It's right next door to <a href="apartment-2.html" data-apt-name="apartment-2">Apartment Two</a>, so if you're travelling as a larger group you can book both and stay together.</p>
+      <p>Wake up to the Indian Ocean. The Sea View Apartment sits high in Umhlanga Arch, with floor-to-ceiling windows framing the coastline all the way down to Durban. It has been professionally designed with warm oak floors, soft natural textures and black-and-white coastal artwork, so it feels calm, light and welcoming from the moment you walk in.</p>
+      <p>The open-plan living area has a deep corner sofa, a smart TV and a solid timber coffee table, flowing into a dining table for four and a sleek, fully equipped kitchen. Step out onto the balcony for coffee at the high breakfast bar or a sundowner in the lounge chair, with the whole coast laid out below you.</p>
+      <p>The main bedroom has a queen bed dressed in crisp white linen, a desk with a view, and its own en-suite with a walk-in glass shower. The second bedroom has two single beds (which can be pushed together), built-in wardrobes and a desk, with a second shower room just next door. It is a great set-up for families, two couples or anyone who needs to work while away.</p>
+      <p>It’s right next door to the <a href="apartment-2.html" data-apt-name="apartment-2">Luxury Balcony Apartment</a>, so larger groups can book both and stay together.</p>
 
       <h3 style="margin-top:1.5em">The space</h3>
-      <!-- TODO: describe each room -->
       <ul class="rules">
-        <li><span>Bedroom 1</span><span>Double bed</span></li>
-        <li><span>Bedroom 2</span><span>Double bed</span></li>
-        <li><span>Living area</span><span>Sofa, Smart TV</span></li>
-        <li><span>Kitchen</span><span>Fully equipped</span></li>
-        <li><span>Bathroom</span><span>Shower</span></li>
+        <li><span>Main bedroom</span><span>Queen bed, en-suite walk-in shower, desk</span></li>
+        <li><span>Second bedroom</span><span>Two single beds, built-in wardrobes, desk</span></li>
+        <li><span>Bathrooms</span><span>En-suite shower room plus a second shower room</span></li>
+        <li><span>Living area</span><span>Corner sofa, smart TV, floor-to-ceiling windows</span></li>
+        <li><span>Kitchen &amp; dining</span><span>Fully equipped kitchen, dining table for four</span></li>
+        <li><span>Balcony</span><span>Breakfast bar with stools, lounge chair, ocean views</span></li>
       </ul>
 
       <h3 style="margin-top:1.5em">What this place offers</h3>
-      <!-- TODO: match to the Airbnb amenities list -->
-      <ul class="amenities">
-        <li>Wi-Fi</li><li>Smart TV</li><li>Fully equipped kitchen</li><li>Oven &amp; hob</li>
-        <li>Microwave</li><li>Fridge freezer</li><li>Coffee maker</li><li>Kettle &amp; toaster</li>
-        <li>Washing machine</li><li>Hairdryer</li><li>Iron</li><li>Central heating</li>
-        <li>Bed linen &amp; towels</li><li>Toiletries</li><li>Self check-in</li><li>Smoke alarm</li>
-      </ul>
+      <ul class="amenities"><li>Sea views</li><li>Private balcony</li><li>Air conditioning</li><li>Wi-Fi</li><li>Smart TV</li><li>Fully equipped kitchen</li><li>Gas hob &amp; oven</li><li>Microwave</li><li>Fridge freezer</li><li>Coffee machine</li><li>Kettle &amp; toaster</li><li>Dining table for four</li><li>Dedicated workspace</li><li>Built-in wardrobes</li><li>Bed linen &amp; towels</li><li>Secure building</li></ul>
 
       <h3>House rules</h3>
-      <!-- TODO: confirm these match your listing -->
       <ul class="rules">
-        <li><span>Check-in</span><span>From 3:00pm</span></li>
-        <li><span>Check-out</span><span>By 11:00am</span></li>
-        <li><span>Smoking</span><span>Not allowed</span></li>
+        <li><span>Check-in &amp; check-out</span><span>Confirmed with your booking</span></li>
+        <li><span>Smoking</span><span>Not allowed indoors</span></li>
         <li><span>Parties or events</span><span>Not allowed</span></li>
-        <li><span>Pets</span><span>Please ask</span></li>
+        <li><span>Building</span><span>Please respect quiet hours for neighbours</span></li>
       </ul>
 
       <h3 style="margin-top:2em" id="availability">Availability</h3>
       <div data-embed="apartment-1">
-        <p>Use the button to see live availability and prices for <span data-apt-name="apartment-1">Apartment One</span>.</p>
+        <p>See live availability and prices for the <span data-apt-name="apartment-1">Sea View Apartment</span>.</p>
         <a class="btn" data-book="apartment-1" href="book.html">Check availability &amp; book</a>
       </div>
     </div>
 
     <aside class="book-panel">
-      <h3 data-apt-name="apartment-1">Apartment One</h3>
-      <p style="color:var(--muted)">Book direct for our best rate, with no booking fees.</p>
+      <h3 data-apt-name="apartment-1">Sea View Apartment</h3>
+      <p style="color:var(--muted)">Book direct for our best rate, with no platform fees.</p>
       <a class="btn" data-book="apartment-1" href="book.html">Book now</a>
-      <a class="btn ghost" href="apartment-2.html">View <span data-apt-name="apartment-2">Apartment Two</span></a>
+      <a class="btn ghost" href="apartment-2.html">View the <span data-apt-name="apartment-2">Luxury Balcony Apartment</span></a>
       <small>Prefer Airbnb? <a data-airbnb="apartment-1" href="#">View on Airbnb</a></small>
     </aside>
   </div>
@@ -101,14 +102,21 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div><strong>The Arch</strong><br><!-- TODO: address --> Address line, Your Town, Postcode</div>
+    <div><strong>The Arch</strong><br>Umhlanga Arch, 1 Ncondo Place<br>Ridgeside, Umhlanga, KwaZulu-Natal</div>
     <div>
-      Email: <a data-email href="#">hello@example.com</a><br>
-      <span data-phone-wrap>Phone: <a data-phone href="#"></a></span>
+      Email: <a data-email href="#"></a><br>
+      <span data-phone-wrap>Phone / WhatsApp: <a data-phone href="#"></a></span>
     </div>
     <div>© <span id="year"></span> The Arch</div>
   </div>
 </footer>
+
+<div class="lightbox" hidden>
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <button class="lightbox-prev" aria-label="Previous photo">‹</button>
+  <img alt="">
+  <button class="lightbox-next" aria-label="Next photo">›</button>
+</div>
 
 <script src="js/config.js"></script>
 <script src="js/main.js"></script>
