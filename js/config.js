@@ -23,13 +23,13 @@ window.ARCH_CONFIG = {
 
   apartments: {
     "apartment-1": {
-      name: "Sea View Apartment",
+      name: "2 Bedroom Luxury Sea View Apartment",
       bookingUrl: "",                   // TODO: InnStyle booking link
       embedUrl: "",                     // TODO: optional InnStyle widget URL
       airbnbUrl: "https://www.airbnb.co.uk/rooms/49722888"
     },
     "apartment-2": {
-      name: "Luxury Balcony Apartment",
+      name: "Dream View Apartment",
       bookingUrl: "",                   // TODO: InnStyle booking link
       embedUrl: "",                     // TODO: optional InnStyle widget URL
       airbnbUrl: "https://www.airbnb.co.uk/rooms/812778798092691373"

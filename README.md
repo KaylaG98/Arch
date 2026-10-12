@@ -11,8 +11,8 @@ It's a plain static site (HTML/CSS/JS, no build step). Open `index.html` in a br
 | File | What it is |
 |---|---|
 | `index.html` | Home: welcome, both apartments, gallery, location, FAQ |
-| `apartment-1.html` | Sea View Apartment: photos, description, amenities, booking |
-| `apartment-2.html` | Luxury Balcony Apartment: photos, description, amenities, booking |
+| `apartment-1.html` | 2 Bedroom Luxury Sea View Apartment: photos, description, amenities, booking |
+| `apartment-2.html` | Dream View Apartment: photos, description, amenities, booking |
 | `book.html` | Booking page with both apartments |
 
 ## Connecting InnStyle bookings
@@ -28,8 +28,8 @@ You can also set the apartment names, enquiry email and phone number there. Unti
 
 All photos are the professional Stephen Rowley shoot from the "Arch photos" folder in Google Drive, resized for the web:
 
-- `images/apartment-1/`: Sea View Apartment (2 bedrooms, light oak interiors)
-- `images/apartment-2/`: Luxury Balcony Apartment (island kitchen, freestanding bath)
+- `images/apartment-1/`: 2 Bedroom Luxury Sea View Apartment (unit 1408) (2 bedrooms, light oak interiors)
+- `images/apartment-2/`: Dream View Apartment (unit 1401)
 - `images/building/`: hero image and coastal views
 
 To change a description, edit the text in `apartment-1.html` / `apartment-2.html`. To swap a photo, replace the file in `images/` with one of the same name.
