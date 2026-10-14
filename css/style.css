@@ -63,7 +63,7 @@ p { margin: 0 0 1em; }
   border-bottom: 1px solid var(--line);
 }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-.brand { font-family: var(--serif); font-size: 1.7rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+.brand { display: flex; align-items: center; }
 .site-nav { display: flex; gap: 26px; align-items: center; }
 .site-nav a { color: var(--ink); text-decoration: none; font-family: "DM Sans", var(--sans); font-size: 1rem; font-weight: 500; letter-spacing: .01em; }
 .site-nav a:hover { color: var(--accent); }
@@ -227,3 +227,6 @@ p { margin: 0 0 1em; }
 .credits a { color: var(--muted); }
 @media (max-width: 700px) { .credits ul { columns: 1; } }
 .gallery-7 > :nth-child(n+6) { grid-column: span 2; }
+.logo { height: 50px; width: auto; display: block; }
+.footer-logo { display: block; margin-bottom: 10px; }
+.footer-logo .logo { height: 34px; }

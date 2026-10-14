@@ -1,4 +1,4 @@
-# The Arch
+# The Arch Apartments
 
 Website for The Arch: two sea-view apartments side by side in Umhlanga Arch, Umhlanga Ridge, Durban, with direct booking through InnStyle.
 
@@ -37,3 +37,13 @@ To change a description, edit the text in `apartment-1.html` / `apartment-2.html
 ## Publishing
 
 Any static host works. With **GitHub Pages**: go to repo Settings → Pages, then pick the `main` branch and `/ (root)`. With **Netlify**: drag the folder onto app.netlify.com/drop. Then point your domain at it.
+
+## Logo
+
+Logo files are in `images/brand/`:
+
+- `logo.svg` / `logo.png`: for light backgrounds
+- `logo-white.svg` / `logo-white.png`: for dark backgrounds or over photos
+- `icon.svg` / `icon.png`: square icon (profile pictures, browser tab)
+
+Use the PNGs for social media, InnStyle and email signatures.
