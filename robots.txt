@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kaylag98.github.io/Arch/sitemap.xml
