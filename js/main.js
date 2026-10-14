@@ -1,8 +1,15 @@
 (function () {
   var config = window.ARCH_CONFIG || { apartments: {} };
 
+  function whatsappHref(text) {
+    return "https://wa.me/" + config.whatsappNumber + "?text=" + encodeURIComponent(text);
+  }
+
   function bookingHref(apt) {
     if (apt && apt.bookingUrl) return apt.bookingUrl;
+    if (config.whatsappNumber) {
+      return whatsappHref("Hi, I'd like to check availability for the " + (apt ? apt.name : "The Arch Apartments") + ". My dates are: ");
+    }
     var subject = encodeURIComponent("Booking enquiry – " + (apt ? apt.name : "The Arch"));
     return "mailto:" + config.contactEmail + "?subject=" + subject;
   }
@@ -17,7 +24,7 @@
   document.querySelectorAll("[data-book]").forEach(function (el) {
     var apt = config.apartments[el.getAttribute("data-book")];
     el.href = bookingHref(apt);
-    if (apt && apt.bookingUrl) {
+    if (apt && (apt.bookingUrl || config.whatsappNumber)) {
       el.target = "_blank";
       el.rel = "noopener";
     }
@@ -52,6 +59,14 @@
     if (!config.contactPhone) { (el.closest("[data-phone-wrap]") || el).remove(); return; }
     el.href = "tel:" + config.contactPhone.replace(/\s/g, "");
     el.textContent = config.contactPhone;
+  });
+
+  // WhatsApp links: <a data-whatsapp>
+  document.querySelectorAll("[data-whatsapp]").forEach(function (el) {
+    if (!config.whatsappNumber) { (el.closest("[data-whatsapp-wrap]") || el).remove(); return; }
+    el.href = whatsappHref("Hi, I have a question about The Arch Apartments.");
+    el.target = "_blank";
+    el.rel = "noopener";
   });
 
   // Mobile nav

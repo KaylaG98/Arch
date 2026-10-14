@@ -14,12 +14,13 @@
  *                availability calendar / booking form in an iframe.
  *                Leave as "" to just show a "Book now" button.
  *
- * Until bookingUrl is filled in, "Book" buttons fall back to the
- * enquiry email below so no guest hits a dead link.
+ * Until bookingUrl is filled in, "Book" buttons open a WhatsApp chat
+ * (or the enquiry email if no WhatsApp number is set).
  */
 window.ARCH_CONFIG = {
-  contactEmail: "hello@example.com",   // TODO: your enquiries email
-  contactPhone: "",                     // TODO: optional, e.g. "+27 82 000 0000"
+  contactEmail: "explorecape@gmail.com",
+  contactPhone: "+27 83 714 2186",
+  whatsappNumber: "27837142186",        // international format, no + or spaces
 
   // Google tracking: paste your IDs here when you have them, e.g. "G-ABC123XYZ"
   googleAnalyticsId: "",                // GA4 Measurement ID (G-...)
