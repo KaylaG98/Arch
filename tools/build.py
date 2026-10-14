@@ -66,8 +66,9 @@ FOOT = '''
   <div class="container footer-inner">
     <div><span class="footer-logo">@@LOGO@@</span>Umhlanga Arch, 1 Ncondo Place<br>Ridgeside, Umhlanga, KwaZulu-Natal</div>
     <div>
-      Email: <a data-email href="#"></a><br>
-      <span data-phone-wrap>Phone / WhatsApp: <a data-phone href="#"></a></span>
+      Email: <a data-email href="mailto:explorecape@gmail.com">explorecape@gmail.com</a><br>
+      <span data-phone-wrap>Phone: <a data-phone href="tel:+27837142186">+27 83 714 2186</a></span><br>
+      <span data-whatsapp-wrap><a data-whatsapp href="https://wa.me/27837142186">Chat on WhatsApp</a></span>
     </div>
     <div>© <span id="year"></span> The Arch Apartments</div>
   </div>
@@ -133,7 +134,7 @@ APTS = {
 
 # ---------- index ----------
 ADDR = {'@type':'PostalAddress','streetAddress':'Umhlanga Arch, 1 Ncondo Place','addressLocality':'Umhlanga','addressRegion':'KwaZulu-Natal','addressCountry':'ZA'}
-BIZ = {'@context':'https://schema.org','@type':'LodgingBusiness','@id':SITE_URL+'#business','name':'The Arch Apartments','description':'Two beautifully furnished self-catering sea-view apartments in Umhlanga Arch, Umhlanga Ridge, Durban.','url':SITE_URL,'logo':SITE_URL+'images/brand/logo.png','image':[SITE_URL+'images/building/whalebone-pier.jpg',SITE_URL+'images/apartment-1/cover.jpg',SITE_URL+'images/apartment-2/cover.jpg'],'address':ADDR,'checkinTime':'15:00','checkoutTime':'10:00','smokingAllowed':False,'amenityFeature':[{'@type':'LocationFeatureSpecification','name':n,'value':True} for n in ['Sea views','Air conditioning','Wi-Fi','Furnished balcony','Biometric access control','24-hour security']]}
+BIZ = {'@context':'https://schema.org','@type':'LodgingBusiness','@id':SITE_URL+'#business','name':'The Arch Apartments','description':'Two beautifully furnished self-catering sea-view apartments in Umhlanga Arch, Umhlanga Ridge, Durban.','url':SITE_URL,'logo':SITE_URL+'images/brand/logo.png','image':[SITE_URL+'images/building/whalebone-pier.jpg',SITE_URL+'images/apartment-1/cover.jpg',SITE_URL+'images/apartment-2/cover.jpg'],'address':ADDR,'telephone':'+27837142186','email':'explorecape@gmail.com','checkinTime':'15:00','checkoutTime':'10:00','smokingAllowed':False,'amenityFeature':[{'@type':'LocationFeatureSpecification','name':n,'value':True} for n in ['Sea views','Air conditioning','Wi-Fi','Furnished balcony','Biometric access control','24-hour security']]}
 def crumbs(*items):
     return {'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':i+1,'name':n,'item':SITE_URL+u} for i,(n,u) in enumerate(items)]}
 idx = head('The Arch Apartments | Sea-View Holiday Apartments in Umhlanga', 'Self-catering sea-view apartments in Umhlanga Arch, Umhlanga Ridge, Durban. A 2-bedroom family apartment and a 1-bedroom penthouse-style stay. Book direct.', home=True, path='', schema=[BIZ])
@@ -363,7 +364,7 @@ bk += f'''
     </div>
     <div class="grid-2" style="margin-top:40px">{choice}
     </div>
-    <p class="center" style="margin-top:40px;color:var(--muted)">Questions before you book? Email <a data-email href="#"></a>.</p>
+    <p class="center" style="margin-top:40px;color:var(--muted)">Questions before you book? <a data-whatsapp href="https://wa.me/27837142186">WhatsApp us</a> or email <a data-email href="mailto:explorecape@gmail.com">explorecape@gmail.com</a>.</p>
   </div>
 </section>
 ''' + FOOT
