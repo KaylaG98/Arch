@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="The Arch Apartments">
+  <g fill="none" stroke="#8a5a3b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 58V28a20 20 0 0 1 40 0v30"/>
+    <path d="M16 58V30a12 12 0 0 1 24 0v28"/>
+    <path d="M18 46c3.3 0 3.3-2.6 6.6-2.6s3.3 2.6 6.6 2.6 3.3-2.6 6.6-2.6"/>
+    <path d="M4 58h48"/>
+  </g>
+  <text x="66" y="38" font-family="'Cormorant Garamond', Georgia, serif" font-size="32" font-weight="600" fill="#2a2622" letter-spacing="0.5">The Arch</text>
+  <text x="67.5" y="56" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600" fill="#8a5a3b" letter-spacing="5.2">APARTMENTS</text>
+</svg>

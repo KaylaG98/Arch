@@ -1,0 +1,106 @@
+(function () {
+  var config = window.ARCH_CONFIG || { apartments: {} };
+
+  function bookingHref(apt) {
+    if (apt && apt.bookingUrl) return apt.bookingUrl;
+    var subject = encodeURIComponent("Booking enquiry – " + (apt ? apt.name : "The Arch"));
+    return "mailto:" + config.contactEmail + "?subject=" + subject;
+  }
+
+  // Apartment names from config
+  document.querySelectorAll("[data-apt-name]").forEach(function (el) {
+    var apt = config.apartments[el.getAttribute("data-apt-name")];
+    if (apt) el.textContent = apt.name;
+  });
+
+  // "Book" buttons: <a data-book="apartment-1">
+  document.querySelectorAll("[data-book]").forEach(function (el) {
+    var apt = config.apartments[el.getAttribute("data-book")];
+    el.href = bookingHref(apt);
+    if (apt && apt.bookingUrl) {
+      el.target = "_blank";
+      el.rel = "noopener";
+    }
+  });
+
+  // Airbnb links: <a data-airbnb="apartment-1">
+  document.querySelectorAll("[data-airbnb]").forEach(function (el) {
+    var apt = config.apartments[el.getAttribute("data-airbnb")];
+    if (apt && apt.airbnbUrl) el.href = apt.airbnbUrl;
+    else el.remove();
+  });
+
+  // Embedded InnStyle widgets: <div data-embed="apartment-1">
+  document.querySelectorAll("[data-embed]").forEach(function (el) {
+    var apt = config.apartments[el.getAttribute("data-embed")];
+    if (!apt || !apt.embedUrl) return;
+    var frame = document.createElement("iframe");
+    frame.src = apt.embedUrl;
+    frame.title = "Check availability – " + apt.name;
+    frame.loading = "lazy";
+    frame.className = "booking-frame";
+    el.innerHTML = "";
+    el.appendChild(frame);
+  });
+
+  // Contact details
+  document.querySelectorAll("[data-email]").forEach(function (el) {
+    el.href = "mailto:" + config.contactEmail;
+    el.textContent = config.contactEmail;
+  });
+  document.querySelectorAll("[data-phone]").forEach(function (el) {
+    if (!config.contactPhone) { (el.closest("[data-phone-wrap]") || el).remove(); return; }
+    el.href = "tel:" + config.contactPhone.replace(/\s/g, "");
+    el.textContent = config.contactPhone;
+  });
+
+  // Mobile nav
+  var toggle = document.querySelector(".nav-toggle");
+  var nav = document.querySelector(".site-nav");
+  if (toggle && nav) {
+    toggle.addEventListener("click", function () {
+      var open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open);
+    });
+    nav.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  // Gallery lightbox
+  var box = document.querySelector(".lightbox");
+  if (box) {
+    var boxImg = box.querySelector("img"), list = [], pos = 0;
+    function show(i) {
+      pos = (i + list.length) % list.length;
+      boxImg.src = list[pos].src;
+      boxImg.alt = list[pos].alt;
+    }
+    function close() { box.hidden = true; document.body.style.overflow = ""; }
+    document.querySelectorAll("[data-gallery]").forEach(function (g) {
+      var imgs = Array.prototype.slice.call(g.querySelectorAll("img"));
+      imgs.forEach(function (im, i) {
+        im.addEventListener("click", function () {
+          list = imgs; show(i);
+          box.hidden = false; document.body.style.overflow = "hidden";
+        });
+      });
+    });
+    box.querySelector(".lightbox-close").addEventListener("click", close);
+    box.querySelector(".lightbox-prev").addEventListener("click", function () { show(pos - 1); });
+    box.querySelector(".lightbox-next").addEventListener("click", function () { show(pos + 1); });
+    box.addEventListener("click", function (e) { if (e.target === box) close(); });
+    document.addEventListener("keydown", function (e) {
+      if (box.hidden) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") show(pos - 1);
+      if (e.key === "ArrowRight") show(pos + 1);
+    });
+  }
+
+  var year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
+})();
