@@ -19,7 +19,12 @@
  */
 window.ARCH_CONFIG = {
   contactEmail: "hello@example.com",   // TODO: your enquiries email
-  contactPhone: "",                     // TODO: optional, e.g. "+44 7700 900000"
+  contactPhone: "",                     // TODO: optional, e.g. "+27 82 000 0000"
+
+  // Google tracking: paste your IDs here when you have them, e.g. "G-ABC123XYZ"
+  googleAnalyticsId: "",                // GA4 Measurement ID (G-...)
+  googleAdsId: "",                      // Google Ads tag ID (AW-...)
+  googleAdsBookLabel: "",               // optional conversion label for "Book" clicks
 
   apartments: {
     "apartment-1": {

@@ -101,6 +101,28 @@
     });
   }
 
+  // Google Analytics / Google Ads (only loads once an ID is set in config.js)
+  var tagIds = [config.googleAnalyticsId, config.googleAdsId].filter(Boolean);
+  if (tagIds.length) {
+    var gs = document.createElement("script");
+    gs.async = true;
+    gs.src = "https://www.googletagmanager.com/gtag/js?id=" + tagIds[0];
+    document.head.appendChild(gs);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    tagIds.forEach(function (id) { window.gtag("config", id); });
+    document.querySelectorAll("[data-book]").forEach(function (el) {
+      el.addEventListener("click", function () {
+        var apt = el.getAttribute("data-book");
+        window.gtag("event", "book_click", { apartment: apt });
+        if (config.googleAdsId && config.googleAdsBookLabel) {
+          window.gtag("event", "conversion", { send_to: config.googleAdsId + "/" + config.googleAdsBookLabel });
+        }
+      });
+    });
+  }
+
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 })();
