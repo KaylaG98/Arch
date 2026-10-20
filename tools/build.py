@@ -102,7 +102,7 @@ APTS = {
    facts=['Sleeps 4', '2 bedrooms', '2 bathrooms', 'Sea-view balcony'],
    card='Bright and airy, with light oak floors, an open-plan lounge wrapped in glass and a furnished balcony facing the ocean. A king bedroom with en-suite and a twin room make it ideal for families and friends.',
    about=[
-     'Unwind and relax as you step into this luxury apartment. Newly built and high up in the iconic Umhlanga Arch, it offers beautiful panoramic views of Umhlanga’s coastline through floor-to-ceiling windows. Whether you are visiting for work or taking a holiday, this apartment is perfect for you.',
+     'Unwind and relax as you step into this luxury apartment. High up in the iconic Umhlanga Arch, it offers beautiful panoramic views of Umhlanga’s coastline through floor-to-ceiling windows. Whether you are visiting for work or taking a holiday, this apartment is perfect for you.',
      'The open-plan living area has a deep corner sofa, a smart TV and a solid timber coffee table, flowing into a dining table for four and a sleek, fully equipped kitchen. Step out onto the furnished balcony for a morning coffee or a sundowner, with the whole coast laid out below you.',
      'Both bedrooms have sweeping views from their large windows. The main bedroom has a king-size bed dressed in fresh linen and its own en-suite with a walk-in glass shower. The second bedroom has two single beds and built-in wardrobes, with a second shower room next door. It is a great set-up for families and groups of friends.',
      'You’ll have a professional concierge service in the building, Wi-Fi, air conditioning throughout and up to two parking bays. Daily housekeeping is available on request at an additional cost.',
